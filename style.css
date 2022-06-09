@@ -1,0 +1,155 @@
+/* fonts*/
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,400;0,500;1,500&display=swap" rel="stylesheet">
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+* {margin: 0; padding: 0;}
+body{height: 100vh;}
+/* loading------------------------------ */
+.loadpage{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	overflow: hidden;
+}
+.loading{position: absolute; z-index: 5;}
+
+h1
+{font-size: 2rem; color: #fff; position: relative;
+font-family: 'Tomorrow', sans-serif; font-weight: 300;}
+h1::before
+{content: attr(data-text);
+	color: #9bfffb; position: absolute; 
+	left: 0; z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	animation: loading 2s ease infinite;
+}
+h1::after{
+	content: "";
+	width: 100%;
+	height: 3px; background: #9bfffb; position: absolute;
+	left: 0; bottom: -10px;
+	animation: loading 2s ease infinite;
+}
+
+@keyframes loading{
+	from{width: 0%;}
+	to{width: 100%;}
+}
+@keyframes loadingLine{
+	from{width: 0%;}
+	to{width: 100%;}
+}
+
+/* nav------------------------------ */
+.navbar{
+	position: fixed; display: flex; 
+	color: white;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px; margin-top: 20px;
+	width: 100%; height: 50px; text-align: center;
+}
+.nav_logo1{width: 250px; margin: 0; float: left;
+padding-left: 40px;}
+.nav_logo2{width: 280px; margin: 0; float: right;
+padding-right: 40px;}
+
+/* main------------------------------ */
+
+.s1{
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%; height: 100%;
+	background: url("mainbg.png") no-repeat center;
+	background-size: cover;
+
+	align-items: center;
+}
+
+.s1::before,
+.s1::after{
+	content: "";
+	position: absolute; z-index: 3;
+	top: 0; bottom: 0;
+	background: #000826;
+	width: 50%;
+	transition: all 0.7s ease-out;
+}
+.s1::before{left: 0%;}
+.s1::after{right: 0%;}
+.s1.active::before{left: -50%;}
+.s1.active::after{right: -50%;}
+
+.start_page{
+	 margin-right: 0;
+
+}
+
+.title-logo{
+	display: flex; padding-top: 200px;
+}
+.mainlogo{
+	width: 250px; height: 250px;
+	margin-top: 40px; margin-left: 50px;
+	animation: rotate_image 6s linear infinite; 
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{100%
+   {transform: rotate(360deg);}
+        }
+
+.title-txt{
+	color: #b3fffb;
+	font-size: 60px;
+}
+.glow {
+  font-family: 'Tomorrow', sans-serif;
+  	font-style: italic;
+	font-weight: 500;
+  font-size: 80px;
+  color: #fff;
+  padding-left: 10px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0126c1, 0 0 40px #0126c1, 0 0 50px #0126c1, 0 0 60px #0126c1, 0 0 70px #0126c1;
+  }
+  to {
+    text-shadow: 0 0 13px #fff, 0 0 23px #b3fffb, 0 0 33px #b3fffb, 0 0 43px #b3fffb, 0 0 53px #b3fffb, 0 0 63px #b3fffb, 0 0 73px #b3fffb;
+  }
+}
+
+
+/*>>start button*/
+.main_info{
+	width: 100%; background: #000826; border: 1px solid;
+	color: #9bfffb; text-align: center; 
+	margin-top: 150px; padding-top: 20px; padding-bottom: 20px;
+}
+p{color: #9bfffb; font-family: 'NanumSquare'; 
+	font-weight: regular; font-size: 18px; margin: 0;
+}
+
+.main_start_bt{
+	width: 200px; height: 60px; line-height: 60px;
+	margin-top: 20px;
+	background: #000826; border: 1px solid;
+	color: #9bfffb; display: inline-block;
+  font-family: 'Tomorrow', sans-serif;
+	font-weight: 500; font-size: 25px;
+}
+a{text-decoration: none; color: white;
+width: 200px; height: 60px; line-height: 60px;
+display: inline-block;}
+
+.main_start_bt:hover{background: #9bfffb;color: #000826;}
+a:hover {color: #000826;}
