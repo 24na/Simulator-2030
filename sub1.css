@@ -685,7 +685,7 @@ cursor : url("mouse2.png"), auto;}
 
 /* -----------------footer------------ */
 .s_footer{
-	width: 1400px; height: 466px; margin: auto;
+	width: 1400px; height: 375px; margin: auto;
 	background: #000826;
 	padding-top: 60px; 
 }
@@ -703,12 +703,12 @@ cursor : url("mouse2.png"), auto;}
 .col_f1{
 	
 	width: 20%; height: 100%;color: #9bfffb;
-	padding-top: 110px;
+	padding-top: 130px;
 }
 .col_f2{
 	
 	width: 80%; height: 100%; color: #9bfffb;
-	padding-top: 110px;
+	padding-top: 130px;
 }
 
 .col_f1 > img{width: 55%; padding-bottom: 10px;}
