@@ -157,4 +157,4 @@ width: 200px; height: 60px; line-height: 60px;
 display: inline-block;}
 
 .main_start_bt:hover{background: #9bfffb;color: #000826;}
-a:hover {color: #000826;}
+a:hover {color: #000826; cursor : url("mouse2.png"), auto;}
