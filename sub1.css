@@ -24,7 +24,7 @@ video{ width: 100%; height: }
 .video{
 	position: fixed; top: 0; 
 	width: 100%; 
-	z-index: -2; min-width: 2020px;
+	z-index: -2; min-width: 178vh;
 }
 .contents{
 	width: 1400px; 
